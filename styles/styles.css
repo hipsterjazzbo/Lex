@@ -1,0 +1,11 @@
+body{padding-top:40px;}
+.navbar .nav li:hover>a i{background-image:url(../images/glyphicons-halflings-white.png);}
+legend{float:left;}
+.input-thirds{width:215px;margin-right:5px;}.input-thirds:last-child{margin-right:0;}
+.definition{overflow:hidden;position:relative;}.definition *{float:left;}
+.definition label{width:20px;margin-right:5px;}
+.definition textarea{clear:both;margin:10px 0 0 25px;}
+.definition .close{position:absolute;top:13px;right:19px;}.definition .close:hover{color:red;}
+form h3{margin-top:15px;}
+#sort-buttons{margin-bottom:30px;}#sort-buttons button{width:50%;}
+#wrapper{margin-top:30px;}#wrapper #sidebar{position:fixed;padding:9px 0;}
