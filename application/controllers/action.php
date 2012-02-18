@@ -14,18 +14,21 @@ class Action extends CI_Controller {
 
 	public function add_language()
 	{
-		$this->language_model->save_language();
+		$language = $this->language_model->save_language();
+		$this->change_language($language['_id'], false);
+
+		$this->session->set_userdata('languages', $this->language_model->get_languages());
 		$this->session->set_flashdata('message', "Great, <strong>{$this->input->post('name')}</strong> has been added. Now, how about some words?");
 		redirect('page/add_word');
 	}
 
-	public function change_language($_id)
+	public function change_language($_id, $redirect = true)
 	{
 		$language = $this->language_model->get_language_by_id($_id);
 		
 		$this->session->set_userdata('current_language', $language);
 
-		redirect('page/list_words');
+		if ($redirect) redirect('page/list_words');
 	}
 }
 

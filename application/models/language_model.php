@@ -37,5 +37,7 @@ class Language_model extends CI_Model {
         }
 
         $this->mongo_db->languages->insert($language);
+
+        return $language;
     }
 }

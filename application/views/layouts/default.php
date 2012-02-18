@@ -9,7 +9,17 @@
 	<link rel="stylesheet" href="<?= site_url('styles/styles.css') ?>">
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="<?= site_url('scripts/main.min.js') ?>"></script>
+	<script src="<?= site_url('scripts/jquery.cleditor.min.js') ?>"></script>
+    <script src="<?= site_url('scripts/main.min.js') ?>"></script>
+
+    <script>
+    $(function() {
+        $(".wysiwyg").cleditor({
+            controls: "bold italic underline | bullets numbering | alignleft center alignright",
+            bodyStyle: "margin:4px; cursor:text"
+        });
+    });
+    </script>
 </head>
 <body>
 	<nav class="navbar navbar-fixed-top">
