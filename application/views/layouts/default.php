@@ -21,18 +21,21 @@
 					<li class="dropdown active">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-book icon-white"></i>
-							<?= $language ?>
+							<?php $current_language = $this->session->userdata('current_language'); echo $current_language['name']; ?>
 							<b class="caret"></b>
 						</a>
 						
 						<ul class="dropdown-menu">
 							<?php foreach ($this->session->userdata('languages') as $language): ?>
-                                <li><a href="#"><?= $language['name'] ?></a></li>
+                                <?php if ($language['_id'] != $current_language['_id']): ?>
+                                    <li><a href="<?= site_url('action/change_language/' . $language['_id']) ?>"><?= $language['name'] ?></a></li>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                             <li class="divider"></li>
                             <li><a href="<?= site_url('page/add_language') ?>"><i class="icon-plus"></i> Add a language</a></li>
 						</ul>
 					</li>
+                    <li><a href="#"><?= $this->session->userdata('lala') ?></a></li>
 				</ul>
 
                 <!-- <ul class="nav pull-right">

@@ -9,9 +9,14 @@ class Language_model extends CI_Model {
 
     public function get_languages()
     {
-        $languages = $this->mongo_db->languages->find();
+        $languages = $this->mongo_db->languages->find()->sort(array('name' => 1));
 
         return iterator_to_array($languages);
+    }
+
+    public function get_language_by_id($_id)
+    {
+        return $this->mongo_db->languages->findOne(array('_id' => new MongoId($_id)));
     }
 
     public function save_language()
