@@ -83,9 +83,9 @@
 					<li><a href="<?= site_url('page/list_words') ?>"><i class="icon-list"></i> List words</a></li>
 					<li><a href="<?= site_url('page/add_word') ?>"><i class="icon-plus"></i> Add a word</a></li>
 
-                    <li class="nav-header">Pages</li>
+                    <!-- <li class="nav-header">Pages</li>
                     <li><a href="<?= site_url('page/list_words') ?>"><i class="icon-list"></i> List words</a></li>
-                    <li><a href="<?= site_url('page/add_word') ?>"><i class="icon-plus"></i> Add a word</a></li>
+                    <li><a href="<?= site_url('page/add_word') ?>"><i class="icon-plus"></i> Add a word</a></li> -->
 				</ul>
 			</div>
 
