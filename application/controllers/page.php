@@ -23,6 +23,13 @@ class Page extends Lex_Controller {
 	{
 		$this->template->build('add_language');
 	}
+
+	public function manage_languages()
+	{
+		$data['languages'] = $this->language_model->get_languages();
+
+		$this->template->build('manage_languages', $data);
+	}
 }
 
 /* End of file page.php */

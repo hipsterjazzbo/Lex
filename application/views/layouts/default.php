@@ -43,12 +43,17 @@
 						</a>
 						
 						<ul class="dropdown-menu">
-							<?php foreach ($this->session->userdata('languages') as $language): ?>
+							<?php if (count($languages) >= 1): ?>
+                                <li><a href="javascript:return false;">No other languages found</a></li>
+                            <?php endif; ?>
+
+                            <?php foreach ($this->session->userdata('languages') as $language): ?>
                                 <?php if ($language['_id'] != $current_language['_id']): ?>
                                     <li><a href="<?= site_url('action/change_language/' . $language['_id']) ?>"><?= $language['name'] ?></a></li>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                             <li class="divider"></li>
+                            <li><a href="<?= site_url('page/manage_languages') ?>"><i class="icon-list"></i> Manage languages</a></li>
                             <li><a href="<?= site_url('page/add_language') ?>"><i class="icon-plus"></i> Add a language</a></li>
 						</ul>
 					</li>

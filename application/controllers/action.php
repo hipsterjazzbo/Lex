@@ -33,6 +33,17 @@ class Action extends CI_Controller {
 
 		if ($redirect) redirect('page/list_words');
 	}
+
+	public function delete_language($_id)
+	{
+		$this->language_model->delete_language($_id);
+		$languages = $this->language_model->get_languages();
+
+		$this->session->set_userdata('languages', $languages);
+		$this->session->unset_userdata('current_language');
+
+		redirect('page/manage_languages');
+	}
 }
 
 /* End of file action.php */

@@ -40,4 +40,10 @@ class Language_model extends CI_Model {
 
         return $language;
     }
+
+    public function delete_language($_id)
+    {
+        $this->mongo_db->languages->remove(array('_id' => new MongoId($_id)), array('justOne' => true));
+    }
+
 }
