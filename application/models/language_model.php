@@ -33,7 +33,10 @@ class Language_model extends CI_Model {
             // Split the comma-separated phones into an array, and trim each one in case they were
             // typed like "a, b, c..."
             $language['phoneme_order'] = explode(',', $language['phoneme_order']);
-            array_walk($language['phoneme_order'], 'trim');
+            
+            foreach ($language['phoneme_order'] as $key => $phoneme) {
+                $language['phoneme_order'][$key] = trim($phoneme);
+            }
         }
 
         $this->mongo_db->languages->insert($language);

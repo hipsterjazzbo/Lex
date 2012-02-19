@@ -43,7 +43,7 @@
 						</a>
 						
 						<ul class="dropdown-menu">
-							<?php if ( ! isset($languages) || count($languages) >= 1): ?>
+							<?php if ( ! isset($languages) || count($languages) < 1): ?>
                                 <li><a href="javascript:return false;">No other languages found</a></li>
                             <?php endif; ?>
 

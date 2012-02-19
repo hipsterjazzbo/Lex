@@ -74,8 +74,6 @@ class Word_model extends CI_Model {
      * 
      * @param  array  $a     The first mongo document to compare
      * @param  array  $b     The second mongo document to compare
-     * @param  string $field Which property to dort by. Either 'english' or 'phonetic'
-     * @param  array  $order An array of potential phones, in the order to sort by.
      * @return -1, 0 or 1, depending in how $a and $b compare
      */
     private function do_sort($a, $b)
