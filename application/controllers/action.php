@@ -10,6 +10,9 @@ class Action extends CI_Controller {
 	public function add_word()
 	{
 		$this->word_model->save_word();
+
+		$this->session->set_flashdata('message', "<strong class=\"native\">{$this->input->post('native')}</strong> has been saved.");
+		redirect('page/add_word');
 	}
 
 	public function add_language()

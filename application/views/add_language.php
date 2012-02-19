@@ -5,7 +5,7 @@
 		<label>Name</label>
 		<input type="text" class="input-xlarge" name="name" placeholder="English" autofocus>
 
-		<label>Phoneme order</label>
+		<label>phone order</label>
 		<input type="text" class="input-xlarge" name="phoneme_order" placeholder="a,b,c,d,e,f,g...">
 
 		<div class="form-actions">

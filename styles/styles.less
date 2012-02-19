@@ -109,8 +109,34 @@ form h3 {
 #sort-buttons {
 	margin-bottom: 30px;
 
-	button {
-		width: 50%;
+	a {
+		width: 348px;
+		padding: 4px 0;
+	}
+}
+
+.word-list {
+	.tab-pane {
+		width: 580px;
+		float: left;
+
+		.word-details {
+			border-bottom: 1px solid #ccc;
+			padding: 10px 0px;
+
+			h3 {
+				line-height: 60px;
+				font-size: 35px;
+				font-weight: normal;
+			}
+
+			.definitions {
+				.part-of-speech {
+					color: @grayLight;
+					font-style: italic;
+				}
+			}
+		}
 	}
 }
 

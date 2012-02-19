@@ -30,7 +30,7 @@ class Language_model extends CI_Model {
 
         else
         {
-            // Split the comma-separated phonemes into an array, and trim each one in case they were
+            // Split the comma-separated phones into an array, and trim each one in case they were
             // typed like "a, b, c..."
             $language['phoneme_order'] = explode(',', $language['phoneme_order']);
             array_walk($language['phoneme_order'], 'trim');

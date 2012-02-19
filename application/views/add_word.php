@@ -4,17 +4,17 @@
 	<div class="alert alert-success"><?= $message ?></div>
 <?php endif; ?>
 
-<form class="form-inline" method="post" action="<?= site_url('action/add_word') ?>">
+<form id="add-word-form" class="form-inline" method="post" action="<?= site_url('action/add_word') ?>">
 	<fieldset>
 		<legend>Add a word</legend>
 		
 		<input type="hidden" name="language" value="<?= $current_language['_id'] ?>">
 
-		<input type="text" class="input-thirds" name="native" placeholder="Native word" autofocus>
+		<input required type="text" class="input-thirds native" name="native" placeholder="Native word" autofocus>
 
-		<input type="text" class="input-thirds" name="phonetic" placeholder="Phonetic pronunciation">
+		<input required type="text" class="input-thirds" name="phonetic" placeholder="Phonetic pronunciation">
 				
-		<input type="text" class="input-thirds" name="english" placeholder="English equivalent">
+		<input required type="text" class="input-thirds" name="english" placeholder="English equivalent">
 		
 		<h3>Definitions</h3>
 		<div id="definitions">

@@ -1,3 +1,4 @@
+<?php $current_language = $this->session->userdata('current_language'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,12 @@
 
 	<link rel="stylesheet" href="<?= site_url('styles/bootstrap.css') ?>">
 	<link rel="stylesheet" href="<?= site_url('styles/styles.css') ?>">
+
+    <style>
+    .native {
+        font-family: <?= ucfirst($current_language['name']) ?>, <?= strtolower($current_language['name']) ?>, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    }
+    </style>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="<?= site_url('scripts/jquery.cleditor.min.js') ?>"></script>
@@ -31,7 +38,7 @@
 					<li class="dropdown active">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-book icon-white"></i>
-							<?php $current_language = $this->session->userdata('current_language'); echo $current_language['name']; ?>
+							<?php echo $current_language['name']; ?>
 							<b class="caret"></b>
 						</a>
 						
