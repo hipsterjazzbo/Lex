@@ -26,7 +26,7 @@ legend {
 }
 
 :-moz-placeholder {
-	font-family: @baseFontFamily;
+font-family: @baseFontFamily;
 }
 
 .definition {
@@ -131,6 +131,7 @@ form h3 {
 		.word-details {
 			border-bottom: 1px solid #ccc;
 			padding: 10px 0px;
+			position: relative;
 
 			h3 {
 				line-height: 60px;
@@ -142,6 +143,19 @@ form h3 {
 				.part-of-speech {
 					color: @grayLight;
 					font-style: italic;
+				}
+			}
+
+			.close {
+				position: absolute;
+				top: 25px;
+				right: 0px;
+				display: none;
+			}
+
+			&:hover {
+				.close {
+					display: block;
 				}
 			}
 		}

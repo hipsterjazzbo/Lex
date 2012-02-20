@@ -15,6 +15,14 @@ class Action extends CI_Controller {
 		redirect('page/add_word');
 	}
 
+	public function edit_word($_id)
+	{
+		$this->word_model->update_word($_id);
+		
+		$this->session->set_flashdata('message', "<strong class=\"native\">{$this->input->post('native')}</strong> has been updated.");
+		redirect('page/list_words');
+	}
+
 	public function add_language()
 	{
 		$language = $this->language_model->save_language();

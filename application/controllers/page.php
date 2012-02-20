@@ -19,6 +19,13 @@ class Page extends Lex_Controller {
 		$this->template->build('add_word');
 	}
 
+	public function edit_word($_id)
+	{
+		$data['word'] = $this->word_model->get_word($_id);
+
+		$this->template->build('edit_word', $data);
+	}
+
 	public function add_language()
 	{
 		$this->template->build('add_language');

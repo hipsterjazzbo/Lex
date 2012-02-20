@@ -9,6 +9,11 @@ class Word_model extends CI_Model {
         parent::__construct();
     }
 
+    public function get_word($_id)
+    {
+        return $this->mongo_db->words->findOne(array('_id' => new MongoId($_id)));
+    }
+
     public function get_words($sort = false)
     {
     	if ($sort)
@@ -37,6 +42,13 @@ class Word_model extends CI_Model {
     	$word = $this->input->post();
 
     	$this->mongo_db->words->insert($word);
+    }
+
+    public function update_word($_id)
+    {
+        $word = $this->input->post();
+
+        $this->mongo_db->words->update(array('_id' => new MongoId($_id)), array('$set' => $word));
     }
 
     private function alphabetical_sort()

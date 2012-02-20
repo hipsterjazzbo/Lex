@@ -5,6 +5,10 @@ $current_language = $this->session->userdata('current_language');
 
 ?>
 
+<?php $message = $this->session->flashdata('message'); if ($message): ?>
+	<div class="alert alert-success"><?= $message ?></div>
+<?php endif; ?>
+
 <div id="sort-buttons" class="btn-group">
 	<a href="#alphabetical-sort" class="btn active">Sort alphabetically (English)</a>
 	<a href="#phonetic-sort" class="btn">Sort phonetically (Native)</a>
@@ -46,6 +50,8 @@ $current_language = $this->session->userdata('current_language');
 									<?php endif; ?>
 								<?php endforeach; ?>
 							</ol>
+
+							<a class="close" href="<?= site_url('page/edit_word/' . $word['_id']) ?>"><i class="icon-pencil"></i></a>
 						</article>
 					<?php endforeach; ?>
 				</div>
@@ -88,6 +94,8 @@ $current_language = $this->session->userdata('current_language');
 									<?php endif; ?>
 								<?php endforeach; ?>
 							</ol>
+
+							<a class="close" href="<?= site_url('page/edit_word/' . $word['_id']) ?>"><i class="icon-pencil"></i></a>
 						</article>
 					<?php endforeach; ?>
 				</div>

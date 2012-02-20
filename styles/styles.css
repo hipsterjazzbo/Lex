@@ -622,6 +622,8 @@ legend{float:left;}
 .definition .close{position:absolute;top:13px;right:19px;}.definition .close:hover{color:red;}
 form h3{margin-top:15px;}
 #sort-buttons{margin-bottom:30px;}#sort-buttons a{width:348px;padding:4px 0;}
-.word-list .tab-pane{width:580px;float:left;}.word-list .tab-pane .word-details{border-bottom:1px solid #ccc;padding:10px 0px;}.word-list .tab-pane .word-details h3{line-height:60px;font-size:35px;font-weight:normal;}
+.word-list .tab-pane{width:580px;float:left;}.word-list .tab-pane .word-details{border-bottom:1px solid #ccc;padding:10px 0px;position:relative;}.word-list .tab-pane .word-details h3{line-height:60px;font-size:35px;font-weight:normal;}
 .word-list .tab-pane .word-details .definitions .part-of-speech{color:#999999;font-style:italic;}
+.word-list .tab-pane .word-details .close{position:absolute;top:25px;right:0px;display:none;}
+.word-list .tab-pane .word-details:hover .close{display:block;}
 #wrapper{margin-top:30px;}#wrapper #sidebar{position:fixed;padding:9px 0;}
